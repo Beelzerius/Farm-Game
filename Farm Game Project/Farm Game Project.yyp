@@ -1,9 +1,11 @@
 {
   "resources": [
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":1,},
-    {"id":{"name":"placeholder_player","path":"sprites/placeholder_player/placeholder_player.yy",},"order":15,},
+    {"id":{"name":"placeholder_playercol","path":"sprites/placeholder_playercol/placeholder_playercol.yy",},"order":0,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
-    {"id":{"name":"placeholder_wall","path":"sprites/placeholder_wall/placeholder_wall.yy",},"order":16,},
+    {"id":{"name":"placeholder_player","path":"sprites/placeholder_player/placeholder_player.yy",},"order":3,},
+    {"id":{"name":"placeholder_direction","path":"sprites/placeholder_direction/placeholder_direction.yy",},"order":2,},
+    {"id":{"name":"placeholder_wall","path":"sprites/placeholder_wall/placeholder_wall.yy",},"order":1,},
     {"id":{"name":"rm_debug","path":"rooms/rm_debug/rm_debug.yy",},"order":0,},
   ],
   "Options": [
