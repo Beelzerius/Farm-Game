@@ -1,62 +1,29 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if keyboard_check_pressed(ord("M")) debug = !debug;
 if keyboard_check_pressed(ord("R")) room_restart()
 
 // Leitura de Comandos
-key_left = keyboard_check_direct(ord("A"));
-key_right = keyboard_check_direct(ord("D"));
-key_up = keyboard_check_direct(ord("W"));
-key_down = keyboard_check_direct(ord("S"));
 
-move_x = key_right - key_left;
-move_y = key_down - key_up;
-moving = abs(move_x) or abs(move_y);
-if moving last_dir = dir;
-dir = point_direction(0,0,move_x, move_y);
+move_x = obj_input.right - obj_input.left;
+move_y = obj_input.down - obj_input.up;
 
-// Colisão e Movimento Horizontal
-if moving {
-	if(place_meeting( x + lengthdir_x(spd,dir), y, obj_wall)){
-		while(true){
-			if place_meeting(x + sign(lengthdir_x(spd,dir)), y, obj_wall){
-				for(var i = 1; i<=4; i++){
-					if !place_meeting(x + sign(lengthdir_x(spd,dir)), y+i, obj_wall){
-						y+=i;
-						break;
-					}
-					if !place_meeting(x + sign(lengthdir_x(spd,dir)), y-i, obj_wall){
-						y-=i;
-						break;
-					}
-				}
-				break;
-			}else
-				x += sign(lengthdir_x(spd,dir));
-		}
-	} else {
-		x += lengthdir_x(spd,dir);
-	}
-	
-	// Colisão Vertical
-	if(place_meeting( x, y + lengthdir_y(spd,dir), obj_wall)){
-		while(true){
-			if place_meeting(x, y + sign(lengthdir_y(spd,dir)), obj_wall){
-				for(var i = 1; i<=4; i++){
-					if !place_meeting(x+i, y + sign(lengthdir_y(spd,dir)), obj_wall){
-						x+=i;
-						break;
-					}
-					if !place_meeting(x-i, y + sign(lengthdir_y(spd,dir)), obj_wall){
-						x-=i;
-						break;
-					}
-				}
-				break;
-			} else
-				y += sign(lengthdir_y(spd,dir));
-		}
-	} else {
-		y += lengthdir_y(spd,dir);
-	}
+
+if(obj_input.run and (abs(move_x) or abs(move_y)))
+{
+	running = true;
+	stamina = max(0, stamina - 0.08);
+	if stamina > 0
+		mult_spd = 1.5;
+	else
+		mult_spd = 0;
+} else if running {
+	if !alarm[0] alarm[0] = 0.5*room_speed;	
+} else {
+	stamina = min(max_stamina, stamina + 0.05);
+	mult_spd = 1;
 }
+
+//show_debug_message(running)
+
+event_inherited()

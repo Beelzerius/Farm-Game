@@ -1,9 +1,20 @@
 {
   "resources": [
+    {"id":{"name":"placeholder_itens","path":"sprites/placeholder_itens/placeholder_itens.yy",},"order":0,},
+    {"id":{"name":"fnt_itens","path":"fonts/fnt_itens/fnt_itens.yy",},"order":0,},
+    {"id":{"name":"obj_inventory","path":"objects/obj_inventory/obj_inventory.yy",},"order":2,},
+    {"id":{"name":"par_entity","path":"objects/par_entity/par_entity.yy",},"order":0,},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":4,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":1,},
     {"id":{"name":"placeholder_playercol","path":"sprites/placeholder_playercol/placeholder_playercol.yy",},"order":0,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"placeholder_player","path":"sprites/placeholder_player/placeholder_player.yy",},"order":3,},
+    {"id":{"name":"get_itens","path":"scripts/get_itens/get_itens.yy",},"order":0,},
+    {"id":{"name":"obj_slot","path":"objects/obj_slot/obj_slot.yy",},"order":3,},
+    {"id":{"name":"initGame","path":"scripts/initGame/initGame.yy",},"order":1,},
+    {"id":{"name":"obj_input","path":"objects/obj_input/obj_input.yy",},"order":1,},
+    {"id":{"name":"spr_slots","path":"sprites/spr_slots/spr_slots.yy",},"order":4,},
+    {"id":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},"order":1,},
     {"id":{"name":"placeholder_direction","path":"sprites/placeholder_direction/placeholder_direction.yy",},"order":2,},
     {"id":{"name":"placeholder_wall","path":"sprites/placeholder_wall/placeholder_wall.yy",},"order":1,},
     {"id":{"name":"rm_debug","path":"rooms/rm_debug/rm_debug.yy",},"order":0,},
@@ -22,6 +33,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"roomId":{"name":"rm_debug","path":"rooms/rm_debug/rm_debug.yy",},},
   ],
   "Folders": [
@@ -39,6 +51,8 @@
     {"folderPath":"folders/Animation Curves.yy","order":12,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Notes.yy","order":13,"resourceVersion":"1.0","name":"Notes","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/System.yy","order":4,"resourceVersion":"1.0","name":"System","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Parents.yy","order":5,"resourceVersion":"1.0","name":"Parents","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
